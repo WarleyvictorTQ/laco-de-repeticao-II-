@@ -1,0 +1,50 @@
+Algoritmo "PesquisaPrefeitura"
+
+Var
+salario, mediaSalario, mediaFilhos, maiorSalario, menorSalario: Real
+numFilhos, totalFamilias: Inteiro
+
+Inicio
+totalFamilias <- 0
+mediaSalario <- 0
+mediaFilhos <- 0
+maiorSalario <- 0
+menorSalario <- 0
+
+Enquanto salario >= 0 faca
+Escreva("Digite o salário: ")
+Leia(salario)
+
+Se salario >= 0 entao
+Escreva("Digite o número de filhos: ")
+Leia(numFilhos)
+
+totalFamilias <- totalFamilias + 1
+mediaSalario <- mediaSalario + salario
+mediaFilhos <- mediaFilhos + numFilhos
+
+Se totalFamilias = 1 entao
+maiorSalario <- salario
+menorSalario <- salario
+Senao
+Se salario > maiorSalario entao
+maiorSalario <- salario
+FimSe
+
+Se salario < menorSalario entao
+menorSalario <- salario
+FimSe
+FimSe
+FimSe
+FimEnquanto
+
+mediaSalario <- mediaSalario / totalFamilias
+mediaFilhos <- mediaFilhos / totalFamilias
+
+   Escreval("Total de famílias que responderam a pesquisa: ", totalFamilias)
+   Escreval("Média do salário da população: ", mediaSalario)
+   Escreval("Média do número de filhos: ", mediaFilhos)
+   Escreval("Maior salário: ", maiorSalario)
+   Escreval("Menor salário: ", menorSalario)
+
+FimAlgoritmo
