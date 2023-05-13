@@ -1,0 +1,35 @@
+Algoritmo "medeia velores inteiro possitivo e negativo "
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 13/05/2023
+Var
+// Seção de Declarações das variáveis
+
+valor, soma, i: inteiro
+media: real
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+soma<- 0
+i<-0
+
+escreval( " Digite um valor possitivo e um negativo " )
+repita
+leia(valor)
+
+se valor>=0 entao
+  soma<- soma+valor
+  i<- i+1
+fimse
+
+ate valor < 0
+
+se i > 0 entao
+media <- soma / i
+escreval(" a media aritmetica dos valores é : ", media)
+senao
+escreval("valor é zero.")
+fimse
+
+Fimalgoritmo
